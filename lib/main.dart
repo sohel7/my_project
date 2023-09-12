@@ -56,22 +56,22 @@ class HomeActivity extends StatelessWidget{
 
 // Center Title Appbar
 //================================
-// class HomeActivity extends StatelessWidget{
-//   const HomeActivity({super.key});
-//   @override
-//   Widget build(BuildContext context) {
-//      return Scaffold(
-//        appBar: AppBar(
-//            title: Text("Inventory"),
-//          titleSpacing: 0,
-//          centerTitle: true,
-//          toolbarHeight: 60,
-//          toolbarOpacity: 1,
-//          //elevation: 0,
-//          elevation: 10,
-//          backgroundColor: Colors.blue,
-//        ),
-//
-//      );
-//   }
-// }
+class HomeActivity extends StatelessWidget{
+  const HomeActivity({super.key});
+  @override
+  Widget build(BuildContext context) {
+     return Scaffold(
+       appBar: AppBar(
+           title: Text("Inventory"),
+         titleSpacing: 0,
+         centerTitle: true,
+         toolbarHeight: 60,
+         toolbarOpacity: 1,
+         //elevation: 0,
+         elevation: 10,
+         backgroundColor: Colors.blue,
+       ),
+
+     );
+  }
+}
