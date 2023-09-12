@@ -20,17 +20,51 @@ class MyApp extends StatelessWidget{
   }
 }
 
+
+// ICON SET IN AppBar
+//=======================
 class HomeActivity extends StatelessWidget{
   const HomeActivity({super.key});
-
-
-
   @override
   Widget build(BuildContext context) {
-     return Scaffold(
-       appBar: AppBar(title: Text("Home"),),
-       body: Text("Hello WOrld"),
-     );
-  }
+    return Scaffold(
 
+      appBar: AppBar(
+        title: Text("Inventory"),
+        titleSpacing: 10,
+        toolbarHeight: 60,
+        toolbarOpacity: 1,
+        //elevation: 0,
+        elevation: 10,
+        backgroundColor: Colors.blue,
+      ),
+
+    );
+  }
 }
+
+
+
+
+
+// Center Title Appbar
+//================================
+// class HomeActivity extends StatelessWidget{
+//   const HomeActivity({super.key});
+//   @override
+//   Widget build(BuildContext context) {
+//      return Scaffold(
+//        appBar: AppBar(
+//            title: Text("Inventory"),
+//          titleSpacing: 0,
+//          centerTitle: true,
+//          toolbarHeight: 60,
+//          toolbarOpacity: 1,
+//          //elevation: 0,
+//          elevation: 10,
+//          backgroundColor: Colors.blue,
+//        ),
+//
+//      );
+//   }
+// }
