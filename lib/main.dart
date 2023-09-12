@@ -37,6 +37,13 @@ class HomeActivity extends StatelessWidget{
         //elevation: 0,
         elevation: 10,
         backgroundColor: Colors.blue,
+
+        // ICON SET IN AppBar
+        actions: [
+          IconButton(onPressed: (){}, icon: Icon(Icons.message)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.search)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.settings)),
+        ],
       ),
 
     );
