@@ -23,6 +23,8 @@ class HomeActivity extends StatelessWidget{
  ];
 
 return Scaffold(
+   // GRID VIEW
+   //=================
 body: GridView.builder(
   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
     crossAxisCount: 2,
