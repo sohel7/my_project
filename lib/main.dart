@@ -1,36 +1,19 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
-main(){
-  runApp( const MyApp());
-}
+    return Scaffold(
+      // SIMPLE FORM
+      //=====================
+    body: Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Padding(padding: EdgeInsets.all(20), child: TextField(decoration: InputDecoration(border: OutlineInputBorder(), labelText: 'First Name'))),
+        Padding(padding: EdgeInsets.all(20), child: TextField(decoration: InputDecoration(border: OutlineInputBorder(), labelText: 'Last Name'))),
+        Padding(padding: EdgeInsets.all(20), child: TextField(decoration: InputDecoration(border: OutlineInputBorder(), labelText: 'Emai'))),
+        Padding(padding: EdgeInsets.all(20), child: ElevatedButton(onPressed: (){},child: Text('Submit'),style: buttonStyle,))
+      ],
+    ),
 
-class MyApp extends StatelessWidget{
-  const MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-   return  MaterialApp(
-     theme: ThemeData(primarySwatch: Colors.green),
-     darkTheme: ThemeData(primarySwatch: Colors.amber ),
-     color: Colors.green,
-     debugShowCheckedModeBanner: false,
-     home: HomeActivity(),
-   );
-  }
-}
-
-class HomeActivity extends StatelessWidget{
-  const HomeActivity({super.key});
+    );
 
 
 
-  @override
-  Widget build(BuildContext context) {
-     return Scaffold(
-       appBar: AppBar(title: Text("Home"),),
-       body: Text("Hello WOrld"),
-     );
-  }
-
-}
