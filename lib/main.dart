@@ -24,6 +24,19 @@ class MyApp extends StatelessWidget{
 //=======================
 class HomeActivity extends StatelessWidget{
   const HomeActivity({super.key});
+
+// TOST MESSAGE FOR  APPBAR
+//=============================================
+  MySnackBar(message,context){
+    ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(message))
+    );
+  }
+
+
+
+
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,9 +52,9 @@ class HomeActivity extends StatelessWidget{
 
         // ICON SET IN AppBar
         actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.message)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.search)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.settings)),
+          IconButton(onPressed: (){MySnackBar("message",context);}, icon: Icon(Icons.message)),
+          IconButton(onPressed: (){MySnackBar("Search",context);}, icon: Icon(Icons.search)),
+          IconButton(onPressed: (){MySnackBar("Settings", context);}, icon: Icon(Icons.settings)),
         ],
       ),
 
@@ -74,3 +87,5 @@ class HomeActivity extends StatelessWidget{
      );
   }
 }
+
+
