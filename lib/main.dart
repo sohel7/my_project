@@ -1,36 +1,49 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-
-main(){
-  runApp( const MyApp());
-}
-
-class MyApp extends StatelessWidget{
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-   return  MaterialApp(
-     theme: ThemeData(primarySwatch: Colors.green),
-     darkTheme: ThemeData(primarySwatch: Colors.amber ),
-     color: Colors.green,
-     debugShowCheckedModeBanner: false,
-     home: HomeActivity(),
-   );
-  }
-}
-
-class HomeActivity extends StatelessWidget{
-  const HomeActivity({super.key});
+// END DRAWER
+//==================
+return Scaffold(
+      endDrawer: Drawer(
+        child: ListView(
+          children: [
+            // DrawerHeader(child:  Text("Sohel")),
+            DrawerHeader(
+              padding: EdgeInsets.all(0),
+              child: UserAccountsDrawerHeader(
+                decoration: BoxDecoration(color: Colors.white),
+                accountName: Text("Md SOhel Hossain", style: TextStyle(color: Colors.black),),
+                accountEmail: Text("sohelju1983@gmail.com",style: TextStyle(color: Colors.black),),
+                currentAccountPicture: Image.network("https://banner2.cleanpng.com/20180710/xui/kisspng-dart-programming-language-flutter-object-oriented-flutter-logo-5b454ed3adae62.4180922415312688197114.jpg"),
+                onDetailsPressed: (){
+                  MySnackBar("Iam Details", context);
+                },
 
 
-
-  @override
-  Widget build(BuildContext context) {
-     return Scaffold(
-       appBar: AppBar(title: Text("Home"),),
-       body: Text("Hello WOrld"),
-     );
-  }
-
-}
+              ),
+            ),
+            ListTile(
+                leading: Icon(Icons.home),
+                title: Text("home"),
+                onTap: (){
+                  MySnackBar("Home",context);
+                }),
+            ListTile(
+                leading: Icon(Icons.contacts),
+                title: Text("contact"),
+                onTap: (){
+                  MySnackBar("Contact",context);
+                }),
+            ListTile(
+                leading: Icon(Icons.person),
+                title: Text("profile"),
+                onTap: (){
+                  MySnackBar("profile",context);
+                }),
+            ListTile(
+                leading: Icon(Icons.phone),
+                title: Text("phone"),
+                onTap: (){
+                  MySnackBar("phone",context);
+                }),
+          ],
+        ),
+      ),
+    );
