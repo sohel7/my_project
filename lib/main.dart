@@ -2,16 +2,17 @@
 //======================================
 class HomeActivity extends StatelessWidget{
    HomeActivity({super.key});
-
+   
+// SNACK BAR FUNCTION
+//===================
   MySnackBar(message,context){
-
     ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text(message))
     );
   }
   
-  // JESON DATA FOR LOOPING
-  //============================
+  // JESON DATA FOR LOOPING/SHOW in LIST VIEW
+  //=========================================
  var MyItems=[
    {"img":"https://pngset.com/images/twitter-heart-icon-clip-art-library-twitter-favorite-icon-balloon-pillow-transparent-png-2657148.png","title":"Sohel"},
    {"img":"https://pngset.com/images/twitter-heart-icon-clip-art-library-twitter-favorite-icon-balloon-pillow-transparent-png-2657148.png","title":"RAna"},
@@ -23,7 +24,9 @@ class HomeActivity extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(    
+    return Scaffold( 
+   // LIST VIEW BUILDER
+   //====================
 body: ListView.builder(
   itemCount: MyItems.length,
   itemBuilder: (context,index){
