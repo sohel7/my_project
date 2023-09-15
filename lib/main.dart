@@ -1,36 +1,17 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-
-main(){
-  runApp( const MyApp());
-}
-
-class MyApp extends StatelessWidget{
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-   return  MaterialApp(
-     theme: ThemeData(primarySwatch: Colors.green),
-     darkTheme: ThemeData(primarySwatch: Colors.amber ),
-     color: Colors.green,
-     debugShowCheckedModeBanner: false,
-     home: HomeActivity(),
-   );
+    return Scaffold(
+      // BOTTOM NEVIGATION BAR
+      //==============================
+    bottomNavigationBar: BottomNavigationBar(
+      currentIndex: 2,// will show the active index
+      items: [
+
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
+        BottomNavigationBarItem(icon: Icon(Icons.settings), label: "Setting"),
+        BottomNavigationBarItem(icon: Icon(Icons.search), label: "Searct"),
+      ],
+    ),
+
+    );
   }
-}
-
-class HomeActivity extends StatelessWidget{
-  const HomeActivity({super.key});
-
-
-
-  @override
-  Widget build(BuildContext context) {
-     return Scaffold(
-       appBar: AppBar(title: Text("Home"),),
-       body: Text("Hello WOrld"),
-     );
-  }
-
-}
