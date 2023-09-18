@@ -7,30 +7,42 @@ main(){
 
 class MyApp extends StatelessWidget{
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-   return  MaterialApp(
-     theme: ThemeData(primarySwatch: Colors.green),
-     darkTheme: ThemeData(primarySwatch: Colors.amber ),
-     color: Colors.green,
-     debugShowCheckedModeBanner: false,
-     home: HomeActivity(),
-   );
+    return  MaterialApp(
+      theme: ThemeData(primarySwatch: Colors.blue),
+      darkTheme: ThemeData(primarySwatch: Colors.blue ),
+      color: Colors.blue,
+      debugShowCheckedModeBanner: false,
+      home: HomeActivity(),
+    );
   }
 }
 
+// Home Activite
+//====================================
 class HomeActivity extends StatelessWidget{
-  const HomeActivity({super.key});
-
-
+   const HomeActivity({super.key});
 
   @override
   Widget build(BuildContext context) {
-     return Scaffold(
-       appBar: AppBar(title: Text("Home"),),
-       body: Text("Hello WOrld"),
-     );
-  }
+    // SCAFFOLD
+    //===================
+      return Scaffold(
+      appBar: AppBar(
+        title: Text("Home"),
+      ),
+      body: Center(
+        // Progress Linier
+        //==================
+      child: LinearProgressIndicator(
+        color: Colors.orange,
+        backgroundColor: Colors.blue,
+      ),
+      )
 
+    );
+
+  }
 }
+
