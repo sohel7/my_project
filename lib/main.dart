@@ -36,6 +36,7 @@ class HomeActivity extends StatelessWidget{
         // Progress Linier
         //==================
       child: LinearProgressIndicator(
+          minHeight: 50,
         color: Colors.orange,
         backgroundColor: Colors.blue,
       ),
