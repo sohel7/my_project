@@ -88,4 +88,21 @@ class HomeActivity extends StatelessWidget{
   }
 }
 
+//========== AppBar with Setting and Search Icon with action ================================
+        appBar: AppBar(
+          actions: [
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {
+                // Add your action here
+              },
+            ),
+            IconButton(
+              icon: Icon(Icons.settings),
+              onPressed: () {
+                // Add your action here
+              },
+            ),
+          ],
+        ),
 
