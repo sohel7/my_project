@@ -1,36 +1,51 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
+//================= Icon Button========================
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.favorite), // Icon to display
+                onPressed: () {
+                  // Action when IconButton is pressed
+                  print('Favorite IconButton Pressed');
+                },
+                color: Colors.red, // Icon color
+                iconSize: 48.0, // Icon size
+                tooltip: 'Favorite', // Tooltip text
+              ),
+              SizedBox(height: 20),
+              IconButton(
+                icon: Icon(Icons.star),
+                onPressed: () {
+                  print('Star IconButton Pressed');
+                },
+                color: Colors.yellow,
+                iconSize: 64.0,
+                tooltip: 'Star',
+              ),
+            ],
+          ),
+        ),
 
-main(){
-  runApp( const MyApp());
-}
+//======================= Elevated Button=============================
 
-class MyApp extends StatelessWidget{
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-   return  MaterialApp(
-     theme: ThemeData(primarySwatch: Colors.green),
-     darkTheme: ThemeData(primarySwatch: Colors.amber ),
-     color: Colors.green,
-     debugShowCheckedModeBanner: false,
-     home: HomeActivity(),
-   );
-  }
-}
-
-class HomeActivity extends StatelessWidget{
-  const HomeActivity({super.key});
-
-
-
-  @override
-  Widget build(BuildContext context) {
-     return Scaffold(
-       appBar: AppBar(title: Text("Home"),),
-       body: Text("Hello WOrld"),
-     );
-  }
-
-}
+        body: Center(
+          child: ElevatedButton(
+            onPressed: () {
+              // Add your button click logic here
+            },
+            style: ElevatedButton.styleFrom(
+              primary: Colors.blue, // Background color
+              onPrimary: Colors.white, // Text color
+              elevation: 5, // Shadow elevation
+              padding: EdgeInsets.all(20), // Button padding
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(90), // Button border radius
+              ),
+            ),
+            child: Text(
+              'Click Me!',
+              style: TextStyle(fontSize: 20),
+            ),
+          ),
+        ),
