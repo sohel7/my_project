@@ -89,7 +89,11 @@ class HomeActivity extends StatelessWidget{
 }
 
 //========== AppBar with Setting and Search Icon with action ================================
-        appBar: AppBar(
+                appBar: AppBar(
+          centerTitle: true,
+          title: Text('My App'),
+          backgroundColor: Colors.red,
+          elevation: 0, // No shadow
           actions: [
             IconButton(
               icon: Icon(Icons.search),
@@ -105,4 +109,3 @@ class HomeActivity extends StatelessWidget{
             ),
           ],
         ),
-
