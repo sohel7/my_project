@@ -1,6 +1,6 @@
 
 
-     onTap: (){
+             onTap: (){
               showDialog(context: context, builder: (context){
                return AlertDialog(
                  title: Text('Select Action'),
@@ -11,6 +11,7 @@
                        title: Text('Edit'),
                        leading: Icon(Icons.edit),
                      ),
+                     Divider(height: 0,),
                      ListTile(
                        title: Text('Delete'),
                        leading: Icon(Icons.delete),
