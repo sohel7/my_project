@@ -1,23 +1,25 @@
 
 
-onTap: (){
+     onTap: (){
               showDialog(context: context, builder: (context){
                return AlertDialog(
                  title: Text('Select Action'),
                  content: Column(
+                   mainAxisSize: MainAxisSize.min,
                    children: [
                      ListTile(
                        title: Text('Edit'),
+                       leading: Icon(Icons.edit),
                      ),
                      ListTile(
                        title: Text('Delete'),
+                       leading: Icon(Icons.delete),
                      )
                    ],
                  ),
                );
               });
             },
-
 --================================== Full Code============================
 
   import 'package:flutter/material.dart';
