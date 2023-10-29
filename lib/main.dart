@@ -1,6 +1,6 @@
 
 
-             onTap: (){
+      onTap: (){
               showDialog(context: context, builder: (context){
                return AlertDialog(
                  title: Text('Select Action'),
@@ -23,7 +23,7 @@
             },
 --================================== Full Code============================
 
-  import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
 
 class ProductListScreen extends StatelessWidget {
   const ProductListScreen({super.key});
@@ -42,12 +42,16 @@ class ProductListScreen extends StatelessWidget {
                return AlertDialog(
                  title: Text('Select Action'),
                  content: Column(
+                   mainAxisSize: MainAxisSize.min,
                    children: [
                      ListTile(
                        title: Text('Edit'),
+                       leading: Icon(Icons.edit),
                      ),
+                     Divider(height: 0,),
                      ListTile(
                        title: Text('Delete'),
+                       leading: Icon(Icons.delete),
                      )
                    ],
                  ),
